@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eshita Shirolkar - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1e1e2f;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #0a0a1a;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #2d9cdb;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('C:\Users\mrshi\OneDrive\Desktop\bff98910-1c47-4614-9906-68c45c4b0caa.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            z-index: 1;
+            margin-bottom: 30px;
+        }
+
+        .hero .btn {
+            background-color: #2d9cdb;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background-color: #5d7be6;
+            transform: scale(1.05);
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #2a2a3c;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2d9cdb;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            color: #bbb;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Skills Section */
+        .skills {
+            background-color: #1e1e2f;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2d9cdb;
+        }
+
+        .skills .skill {
+            display: inline-block;
+            width: 150px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #3a3a56;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .skills .skill:hover {
+            transform: scale(1.1);
+            background-color: #2d9cdb;
+        }
+
+        .skills .skill h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .skills .skill p {
+            font-size: 1rem;
+            color: #bbb;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #2a2a3c;
+        }
+
+        .portfolio h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2d9cdb;
+        }
+
+        .portfolio .project {
+            display: inline-block;
+            width: 300px;
+            margin: 20px;
+            background-color: #3a3a56;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio .project:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .portfolio .project .project-info {
+            padding: 15px;
+        }
+
+        .portfolio .project .project-info h3 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .portfolio .project .project-info p {
+            font-size: 1rem;
+            color: #bbb;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 20px;
+            background-color: #2a2a3c;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2d9cdb;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+
+        .contact .btn {
+            background-color: #2d9cdb;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact .btn:hover {
+            background-color: #5d7be6;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a1a;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #2d9cdb;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+       
+        <h1>Eshita Shirolkar</h1>
+        <p>Web Developer | Designer | Problem Solver</p>
+        
+        <button class="btn">View My Work</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hi! I’m Eshita Shirolkar , a passionate learner and  web developer with basic knowledge in creating clean, responsive, and interactive websites. I love to solve problems with creative solutions and continuously learn new technologies.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <h3>HTML</h3>
+            <p>Building structure for the web.</p>
+        </div>
+        <div class="skill">
+            <h3>CSS</h3>
+            <p>Styling and designing beautiful layouts.</p>
+        </div>
+        <div class="skill">
+            <h3>JavaScript</h3>
+            <p>Making websites interactive.</p>
+        </div>
+        <div class="skill">
+            <h3>React</h3>
+            <p>Building modern, dynamic user interfaces.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>My Portfolio</h2>
+        <div class="project">
+            <img src="C:\Users\mrshi\OneDrive\Pictures\Screenshots\Screenshot 2024-04-25 132353.png" alt="Online Movie ticket Booking system">
+            <div class="project-info">
+                <h3>Online Movie ticket Booking system</h3>
+                <p>A web application built using HTML, CSS, and JavaScript and MySQL.</p>
+            </div>
+        </div>
+        <div class="project">
+            <img src="C:\Users\mrshi\OneDrive\Pictures\Screenshots\Screenshot 2025-02-14 165215.png" alt="Landing Page ">
+            <div class="project-info">
+                <h3>Landing Page </h3>
+                <p>A basic landing page made with css and HTML.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to collaborate or have any questions, feel free to reach out!</p>
+        <button class="btn">Get in Touch</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+        <p><a href="mailto:shirolkareshita@example.com">Email me</a></p>
+    </footer>
+
+</body>
+</html>
+
